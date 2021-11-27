@@ -137,7 +137,7 @@ h1 {
   height: 3rem;
 }
 
-.ingredient-list {
+.ingredient-list, .nutrients_list {
   margin-top: 1rem;
   background-color: #f0f0f0;
   border-radius: 0.5rem;

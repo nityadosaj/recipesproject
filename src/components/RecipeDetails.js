@@ -1,15 +1,21 @@
-import React from 'react';
-import {v4 as uuidv4} from 'uuid';
+import React, {useState} from 'react';
+import { IngredientList } from './IngredientList';
+import NutrientsList from './NutrientsList';
 
-const RecipeDetails = ({ingredients}) => {
-    return ingredients.map(ingredient => {
-        return (
-            <ul key={uuidv4()} className="ingredient-list">
-                <li className="ingredient-text">{ingredient.text}</li>
-                <li className="ingredient-weight">Weight - {ingredient.weight}</li>
-            </ul>
-        )
-    })
+const RecipeDetails = ({recipe}) => {
+    const [loading, setloading] = useState(false); //loading
+    const {label, image, ingredients, totalNutrients} = recipe.recipe;
+    return (
+        <div className="recipe">
+            <h2>{label}</h2>
+            <img src={image} alt={label}/>
+            <button onClick={()=>setloading(!loading)}>Nutrients List </button>
+            <button onClick={()=>setloading(!loading)}>Ingredients</button>
+        {loading && <IngredientList ingredients={ingredients}/>}
+        {loading && <NutrientsList recipe={recipe}/>}
+        </div>
+    )
 }
 
-export default RecipeDetails;
+ export default RecipeDetails;
+//

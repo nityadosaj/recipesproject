@@ -1,7 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Comforter+Brush&display=swap");
 
 * {
-  font-family: "Source Sans Pro", sans-serif;
   margin: 0;
   padding: 0;
   text-decoration: none;
@@ -10,7 +9,9 @@
 }
 
 html {
+  font-family: "Comforter Brush", sans-serif;
   font-size: 62.5%;
+  background-color: darkcyan;
 }
 
 .App {
@@ -22,9 +23,9 @@ html {
 h1 {
   font-size: 8rem;
   letter-spacing: 0.1rem;
-  font-style: italic;
-  color: #40b48e;
-  text-shadow: 0 0.2rem 5rem rgb(119, 115, 115);
+  font-style: bold;
+  color:chocolate;
+  text-shadow: 0 0.2rem 5rem rgb(2, 2, 2);
   text-transform: uppercase;
   margin: 4rem 0;
 }
@@ -35,14 +36,15 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #d3d3d3;
+  background-color: #558615;
   border-radius: 0.5rem;
   margin-bottom: 5rem;
-  box-shadow: 1rem 2rem 5rem #aaa;
+  box-shadow: 1rem 2rem 5rem rgb(7, 6, 6);
   position: relative;
 }
 
 .alert {
+  font-family: 'Courier New', Courier, monospace;
   position: absolute;
   top: -3rem;
   left: 0;
@@ -78,7 +80,7 @@ h1 {
 .search-form input[type="submit"] {
   width: 25%;
   text-transform: uppercase;
-  background-color: #40b48e;
+  background-color: #4048b4;
   color: #fff;
 }
 
@@ -96,11 +98,11 @@ h1 {
   margin: 3rem;
   display: flex;
   flex-direction: column;
-  background-color: #d3d3d3;
+  background-color: #558615;
   padding: 2rem;
   position: relative;
   border-radius: 0.5rem;
-  box-shadow: 2rem 3rem 5rem #aaa;
+  box-shadow: 2rem 3rem 5rem rgb(5, 4, 4);
 }
 
 .recipe h2 {
@@ -114,7 +116,7 @@ h1 {
   font-size: 2.5rem;
   font-weight: 400;
   text-shadow: 0 0.5rem 0.5rem #555;
-  color: #fff;
+  color: black;
 }
 
 .recipe img {
@@ -124,14 +126,14 @@ h1 {
 
 .recipe a {
   font-size: 1.8rem;
-  color: #40b48e;
+  color: #558615;
 }
 
 .recipe button {
   font-size: 2rem;
   text-transform: uppercase;
-  color: #fff;
-  background-color: #40b48e;
+  color:#cf5029;
+  background-color: #4048b4;
   border: none;
   border-radius: 0.5rem;
   height: 3rem;
@@ -149,11 +151,13 @@ h1 {
 }
 
 .ingredient-text {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 1.5rem;
   color: #888;
 }
 
 .ingredient-weight {
-  color: #40b48e;
+  font-family: cursive;
+  color: #558615;
   font-size: 1.3rem;
 }

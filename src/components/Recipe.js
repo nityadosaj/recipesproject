@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import { v4 as uuidv4 } from 'uuid';
 import RecipeDetails from "./RecipeDetails";
@@ -27,7 +27,10 @@ const Recipe = () => {
         setAlert("Please fill the form");
         }
     }
-
+    useEffect(() => {
+        localStorage.setItem("recipe", JSON.stringify(recipes));
+    }, [recipes])
+    
     const onSubmit = (e)=>{
         e.preventDefault();
         getRecipe();
@@ -38,7 +41,7 @@ const Recipe = () => {
     }
     return(
         <div className='App'>
-            <h1>Food Searching App</h1>
+            <h1>Recipe Finder</h1>
             <form className="search-form" onSubmit={onSubmit}>
                 {alert !== "" && <Alert alert={alert}/>}
                 <input type="text" placeholder="Search Food" autoComplete="off" onChange={onChange} value={query}/>

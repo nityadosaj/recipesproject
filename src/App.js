@@ -1,7 +1,6 @@
 import React, {Fragment} from 'react';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import './App.css';
-import NutrientsList from './components/NutrientsList';
 import Recipe from './components/Recipe';
 import ScrollButton from './components/ScrollButton';
 import { Content} from './components/Styles';

@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import { v4 as uuidv4 } from 'uuid';
 import RecipeDetails from "./RecipeDetails";
-import Alert  from "./Alert";
+import AlertPopOver from "./AlertPopOver";
 
 const Recipe = () => {
     const [query, setQuery] = useState("");
@@ -43,7 +43,7 @@ const Recipe = () => {
         <div className='App'>
             <h1>Recipe Finder</h1>
             <form className="search-form" onSubmit={onSubmit}>
-                {alert !== "" && <Alert alert={alert}/>}
+                {alert !== "" && <AlertPopOver alert={alert}/>}
                 <input type="text" placeholder="Search Food" autoComplete="off" onChange={onChange} value={query}/>
                 <input type="submit" value="Search"/>
             </form>

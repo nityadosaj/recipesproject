@@ -1,11 +1,9 @@
 import React, {Fragment} from 'react';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import './App.css';
+import './App.scss';
 import Recipe from './components/Recipe';
 import ScrollButton from './components/ScrollButton';
 import { Content} from './components/Styles';
-import 'bootstrap/dist/css/bootstrap.min.css';
-
 
 function App() {
   return(

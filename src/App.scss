@@ -1,30 +1,30 @@
 @import url("https://fonts.googleapis.com/css?family=Comforter+Brush&display=swap");
-
+@import "~bootstrap/scss/bootstrap";
 * {
   margin: 0;
   padding: 0;
   text-decoration: none;
   list-style-type: none;
   outline: none;
-  background-color: darkcyan;
 }
 
 html {
-  font-family: "Comforter Brush", sans-serif;
-  font-size: 62.5%;
+    font-size: 62.5%;
 }
 
 .App {
+    font-family: "Comforter Brush", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: darkcyan;
 }
 
 h1 {
   font-size: 8rem;
   letter-spacing: 0.1rem;
   font-style: bold;
-  color:chocolate;
+  color: chocolate;
   text-shadow: 0 0.2rem 5rem rgb(2, 2, 2);
   text-transform: uppercase;
   margin: 4rem 0;
@@ -52,14 +52,14 @@ h1 {
   width: calc(100% - 0.4rem);
   border-radius: 0.5rem;
   padding: 0.2rem;
-}
 
-.alert h3 {
-  font-size: 1.8rem;
-  color: #fff;
-  font-weight: 400;
-  text-transform: uppercase;
-  text-align: center;
+  h3 {
+    font-size: 1.8rem;
+    color: #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+  }
 }
 
 .search-form input {
@@ -69,19 +69,19 @@ h1 {
   margin: 0 0.5rem;
   border-radius: 0.5rem;
   height: 3rem;
-}
 
-.search-form input[type="text"] {
-  padding: 0 0.5rem;
-  width: 60%;
-  color: #555;
-}
+  &[type="text"] {
+    padding: 0 0.5rem;
+    width: 60%;
+    color: #555;
+  }
 
-.search-form input[type="submit"] {
-  width: 25%;
-  text-transform: uppercase;
-  background-color: #4048b4;
-  color: #fff;
+  &[type="submit"] {
+    width: 25%;
+    text-transform: uppercase;
+    background-color: #4048b4;
+    color: #fff;
+  }
 }
 
 .recipes {
@@ -103,40 +103,40 @@ h1 {
   position: relative;
   border-radius: 0.5rem;
   box-shadow: 2rem 3rem 5rem rgb(5, 4, 4);
-}
 
-.recipe h2 {
-  background-color: rgba(161, 161, 161, 0.7);
-  border-radius: 0.5rem;
-  padding: 0.3rem 0.5rem;
-  position: absolute;
-  top: 2.5rem;
-  left: 2.5rem;
-  right: 2.5rem;
-  font-size: 2.5rem;
-  font-weight: 400;
-  text-shadow: 0 0.5rem 0.5rem #555;
-  color: black;
-}
+  h2 {
+    background-color: rgba(161, 161, 161, 0.7);
+    border-radius: 0.5rem;
+    padding: 0.3rem 0.5rem;
+    position: absolute;
+    top: 2.5rem;
+    left: 2.5rem;
+    right: 2.5rem;
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-shadow: 0 0.5rem 0.5rem #555;
+    color: black;
+  }
 
-.recipe img {
-  border-radius: 0.5rem;
-  object-fit: cover;
-}
+  img {
+    border-radius: 0.5rem;
+    object-fit: cover;
+  }
 
-.recipe a {
-  font-size: 1.8rem;
-  color: #558615;
-}
+  a {
+    font-size: 1.8rem;
+    color: #558615;
+  }
 
-.recipe button {
-  font-size: 2rem;
-  text-transform: uppercase;
-  color:#cf5029;
-  background-color: #4048b4;
-  border: none;
-  border-radius: 0.5rem;
-  height: 3rem;
+  button {
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #cf5029;
+    background-color: #4048b4;
+    border: none;
+    border-radius: 0.5rem;
+    height: 3rem;
+  }
 }
 
 .ingredient-list, .nutrients_list {

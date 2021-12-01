@@ -5,6 +5,7 @@ function NutrientsTable(props){
     return(
         <Modal
             {...props}
+            className="nutrients_list"
             size="lg"
             aria-labelledby="contained-modal-title-vcenter"
             centered

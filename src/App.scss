@@ -178,7 +178,10 @@ h1 {
       justify-content: center;
       align-items: flex-start;
     }  
-    // .nutrients_list{
-    //   max-width: fit-content;
-    // }  
+    .nutrients_list{
+      justify-content: center;
+      align-items: center;
+      height: 500px;
+      width:300px;
+    }
 }

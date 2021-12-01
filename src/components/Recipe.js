@@ -5,11 +5,13 @@ import {Button} from 'react-bootstrap';
 import { v4 as uuidv4 } from 'uuid';
 import RecipeDetails from "./RecipeDetails";
 import AlertPopOver from "./AlertPopOver";
+import Next from './Next';
 
 const Recipe = () => {
     const [query, setQuery] = useState("");
     const [recipes, setRecipes] = useState([]);
     const [alert, setAlert] = useState("");
+    let nextPage = "";
     
     const url =`https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=053f66cd&app_key=977184b019927b0735bdc41312d1881a`;
     
@@ -21,9 +23,10 @@ const Recipe = () => {
             return setAlert("No food with such name");
         }
         setRecipes(res.data.hits);
-        console.log(res.data.hits);
+        console.log(res.data);
         setAlert("");
         setQuery("");
+        nextPage = res.data._links.next.href; 
         }
         else{
         setAlert("Please fill the form");
@@ -54,6 +57,7 @@ const Recipe = () => {
                 {recipes !== [] && recipes.map(recipe =>
                     <RecipeDetails key={uuidv4()} recipe={recipe}/>)}
             </div>
+            <Next nextPage={nextPage}/>
         </div>
     );
 }

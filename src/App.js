@@ -13,6 +13,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Recipe/>}/>
             <Route path="/kitchen" element={<Kitchen/>}/>
+            <Route path="/next"/>
           </Routes>
         </Router>
         <Fragment>

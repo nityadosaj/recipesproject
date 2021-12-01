@@ -168,7 +168,7 @@ h1 {
 
 @media screen and (max-width: 700px) {
     html{
-      font-size: 50%;
+      font-size: 34%;
     }
     .recipes{
       max-width: fit-content;
@@ -177,6 +177,8 @@ h1 {
       flex-wrap: wrap;
       justify-content: center;
       align-items: flex-start;
-    }
-    
+    }  
+    .nutrients_list{
+      max-width: fit-content;
+    }  
 }

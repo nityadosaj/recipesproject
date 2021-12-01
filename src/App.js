@@ -4,6 +4,7 @@ import './App.scss';
 import Recipe from './components/Recipe';
 import ScrollButton from './components/ScrollButton';
 import { Content} from './components/Styles';
+import Kitchen from './components/Kitchen/Kitchen';
 
 function App() {
   return(
@@ -11,7 +12,7 @@ function App() {
         <Router>
           <Routes>
             <Route path="/" element={<Recipe/>}/>
-            {/* <Route path="/nutrients" element={<NutrientsList recipe={JSON.parse(localStorage.getItem('recipe'))}/>}/> */}
+            <Route path="/kitchen" element={<Kitchen/>}/>
           </Routes>
         </Router>
         <Fragment>

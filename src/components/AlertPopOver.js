@@ -1,18 +1,22 @@
 import React, {useState} from 'react';
-import {Alert, Button} from 'react-bootstrap';
+import { Toast, ToastContainer} from 'react-bootstrap';
 
-function AlertPopOver({alert}){
-    const [show, setShow] = useState(false);
-    if(show)
-    {
-        return (
-            <Alert variant="danger" onClose={()=>setShow(false)} dismissible>
-                <Alert.Heading>Seems like we have a problem, Scotty!</Alert.Heading>
-                {alert}
-            </Alert>
-        )
-    }
-    return <Button onClick={()=>setShow(true)}>Show Alert</Button>;
+function AlertPopOver(props){
+    const [show, setShow] = useState(props.show);
+    
+    return(
+        <ToastContainer position="top-end" className="p-3">
+            <Toast bg={props.variant.toLowerCase()} onClose={()=>setShow(false)} show={show} delay={3000} autohide>
+                <Toast.Header>
+                    <img src="holder.js/20x20?text=%20" className="rounded me-2" alt="" />
+                    <strong className="me-auto">{props.alert}</strong>
+                    <small className="text-muted">2 seconds ago</small>
+                </Toast.Header>
+                <Toast.Body>Heads up, toasts will stack automatically</Toast.Body>
+            </Toast>
+        </ToastContainer>
+    )
+    
 }
 
 export default AlertPopOver;

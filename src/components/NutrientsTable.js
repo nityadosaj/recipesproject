@@ -1,6 +1,8 @@
 import React from 'react';
 import {Modal, Button, Table} from 'react-bootstrap';
 
+//A pop-up nutrients table containing all the important nutrients
+
 function NutrientsTable(props){
     return(
         <Modal

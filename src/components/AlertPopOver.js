@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import { Toast, ToastContainer} from 'react-bootstrap';
 
+//shows an alert if the search bar is empty or the name is wrong
+
 function AlertPopOver(props){
     const [show, setShow] = useState(props.show);
     

@@ -3,9 +3,11 @@ import { IngredientList } from './IngredientList';
 import NutrientsList from './NutrientsList';
 import AddRecipe from './AddRecipe';
 
+//Shows recipe cards by calling nutrients list and ingredients list
+
 const RecipeDetails = ({recipe}) => {
     const [loading, setloading] = useState(false); //loading
-    const {_links} = recipe;
+    const {_links} = recipe; //not implemented
     const {label, image, ingredients, totalNutrients} = recipe.recipe;
     return (
         <div className="recipe">

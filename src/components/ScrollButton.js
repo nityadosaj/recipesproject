@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import {FaArrowCircleUp} from 'react-icons/fa';
 import { Button } from './Styles';
   
+//Scroll button to jump to the top of the page
+
 const ScrollButton = () =>{
   
   const [visible, setVisible] = useState(false)

@@ -1,6 +1,8 @@
 import React from 'react';
 import {v4 as uuidv4} from 'uuid';
 
+//ingredient list with text and weight
+
 export const IngredientList = ({ingredients}) => {
     return ingredients.map(ingredient => {
         return (

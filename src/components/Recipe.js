@@ -8,7 +8,10 @@ import AlertPopOver from "./AlertPopOver";
 import Next from './Next';
 import { ThemeContext } from '../Themes/theme-context';
 
+//Using API, Themes and Recipe Cards
+
 const Recipe = () => {
+    //initialize variables
     const {theme, toggle, dark} = useContext(ThemeContext);
     const [query, setQuery] = useState("lentils");
     const [recipes, setRecipes] = useState([]);
@@ -17,14 +20,17 @@ const Recipe = () => {
     const [data, setData] = useState("");
     let nextPage = "";
     
+    //api url
     const url =`https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=053f66cd&app_key=977184b019927b0735bdc41312d1881a`;
     
+    //get results
     const getRecipe = async () =>{
+        //if query is empty or the name doesnt match, throw an error
         if(query !== "")
         {
-        const res = await axios.get(url);
-        if(res.data.more){
-            return setAlert("No food with such name");
+            const res = await axios.get(url);
+            if(res.data.more){
+                return setAlert("No food with such name");
         }
         setRecipes(res.data.hits);
         setData(res.data);
@@ -38,11 +44,13 @@ const Recipe = () => {
         }
     }
     
+    //store the recipe in local storage for later use
     useEffect(() => {
         if(!localStorage.getItem("recipe") || JSON.parse(localStorage.getItem("recipe")) === 0)
             localStorage.setItem("recipe", JSON.stringify(data));
     }, [recipes])
     
+    //show the initial query
     useEffect(()=>{
         getRecipe();
     },[query]);
@@ -55,6 +63,7 @@ const Recipe = () => {
     const updateSearch= (e)=>{
         setSearch(e.target.value);
     }
+    
     return(
         <div className='recipe-app' style={{backgroundColor: theme.backgroundColor, color: theme.color}}>
             <Button onClick={toggle} style={{backgroundColor: theme.backgroundColor, color: theme.color, outline:"none"}} className="toggle-button">

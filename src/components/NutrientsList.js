@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import {Button} from 'react-bootstrap';
 import NutrientsTable from './NutrientsTable';
 
+//Button for nutrients list and calls nutrients table
+
 function NutrientsList({totalNutrients})
 {
     const [modalShow, setModalShow] = useState(false);

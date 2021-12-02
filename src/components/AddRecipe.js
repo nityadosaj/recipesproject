@@ -2,6 +2,9 @@ import React, {useState, useEffect} from 'react';
 import {Button} from 'react-bootstrap';
 import {MdAddShoppingCart} from 'react-icons/md';
 
+//not implemented yet
+//Would have stored the recipe links when clicked and sent it to Kitchen.js
+
 const AddRecipe = ({links}) => {
     const {self} = links;
     const [state, setState] = useState("");

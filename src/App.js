@@ -6,10 +6,14 @@ import ScrollButton from './components/ScrollButton';
 import { Content} from './components/Styles';
 import Kitchen from './components/Kitchen/Kitchen';
 
+//Creates Routes and a Scroll Button which takes you to top of the page
+
 function App() {
 
   return(
       <div className="App">
+        
+        {/**Routes */}
         <Router>
           <Routes>
             <Route path="/" element={<Recipe/>}/>
@@ -17,6 +21,8 @@ function App() {
             <Route path="/next"/>
           </Routes>
         </Router>
+
+        {/**Scroll button*/}
         <Fragment>
           <Content />
           <ScrollButton />

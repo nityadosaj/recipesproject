@@ -1,5 +1,5 @@
 import React, { createContext, useEffect, useState } from "react"
-
+//changes between dark and light themes
 const themes ={
     dark:{
         backgroundColor:"darkcyan",

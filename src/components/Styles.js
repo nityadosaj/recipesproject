@@ -1,5 +1,7 @@
 import styled from 'styled-components';
   
+//Styles for the scroll button
+
 export const Heading = styled.h1`
    text-align: center;
    color: green;

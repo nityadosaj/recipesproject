@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react';
-import Paginate from 'react-paginate';
 import {Container, Pagination, PageItem} from 'react-bootstrap';
+
+//not yet implemented
+//Would have shown the next 20 recipes in the array
 
 const Next = ({nextPage}) => {
     const [offset, setOffset] = useState(0);

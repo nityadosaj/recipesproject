@@ -1,5 +1,8 @@
 import React from 'react'
 
+//not yet implemented
+//Would have shown the saved recipe of the user
+
 const Kitchen = () => {
     return (
         <div>

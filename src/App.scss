@@ -13,27 +13,20 @@ html {
     font-size: 62.5%;
 }
 
-// .image{
-//   background-image: url('/pexels-lukas-349609.jpg');
-//   height: 100%;
-//   background-position: center;
-//   background-repeat: no-repeat;
-//   background-size: cover;
-//   filter: blur(5px);
-// }
-
 .App {
   font-family: "Comforter Brush", sans-serif;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center;  
 }
 
 .recipe-app{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; 
+  filter: none;
 }
+
 .toggle-button{
   float: left;
   margin-left: -900px;

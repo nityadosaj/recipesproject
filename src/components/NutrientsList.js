@@ -8,7 +8,7 @@ function NutrientsList({totalNutrients})
     const tn = totalNutrients;
         return(
             <>
-                <Button variant = "primary" onClick={()=> setModalShow(true)}>
+                <Button variant = "primary" onClick={()=> setModalShow(true)} className="nutrients">
                     Nutrients List
                 </Button> 
                 <NutrientsTable

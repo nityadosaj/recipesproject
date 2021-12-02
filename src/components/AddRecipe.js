@@ -4,19 +4,26 @@ import {MdAddShoppingCart} from 'react-icons/md';
 
 const AddRecipe = ({links}) => {
     const {self} = links;
-    const [state, setState] = useState([]);
+    const [state, setState] = useState("");
+    const [data, setData] = useState([]);
+    //console.log(self);
 
-    const onClick = ()=>{
-        setState(self.href);
-    }
     useEffect(()=>{
         localStorage.setItem("recipeLink", JSON.stringify(state));
     }, [state])
+    
+    const onClick = ()=>{
+        console.log(self.href);
+        setState(self.href);
+        setData(JSON.parse(localStorage.getItem("recipeLink")));
+        console.log(data);
+        data.push(state);
+    }
 
     return (
         <div>
           <Button onClick={onClick}>
-          {<MdAddShoppingCart size="30px" color="yellow"/>}
+          {<MdAddShoppingCart size="25px" color="yellow"/>}
               </Button>  
         </div>
     )

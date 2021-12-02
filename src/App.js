@@ -7,6 +7,7 @@ import { Content} from './components/Styles';
 import Kitchen from './components/Kitchen/Kitchen';
 
 function App() {
+
   return(
       <div className="App">
         <Router>

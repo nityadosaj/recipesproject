@@ -53,6 +53,8 @@ Install my-project with npm
 - Recipe cards
 - Nutrients List
 - Ingredients List
+- Scroll button to jump to the top of the page when to far down
+- Next page (not yet implemented)
 - Kitchen to store saved recipes (not yet implemented)
 
 
